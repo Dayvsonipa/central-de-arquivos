@@ -11,5 +11,14 @@ const materiais = [
         tamanho: "9 KB",
         data: "28/08/2026",
         arquivo: "materiais/logica-programacao/crud_alunos.c"
+    },
+    {
+        nome: "trabalho_crud_projetos_1_a_5.txt",
+        disciplina: "Lógica de Programação",
+        descricao: "Descrição do trabalho prático em grupo com cinco opções de projetos CRUD.",
+        tipo: "Documento de texto",
+        tamanho: "TXT",
+        data: "28/08/2026",
+        arquivo: "materiais/logica-programacao/trabalho_crud_projetos_1_a_5.txt"
     }
 ];

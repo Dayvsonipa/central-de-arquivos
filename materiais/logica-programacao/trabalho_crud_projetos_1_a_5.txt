@@ -1,0 +1,515 @@
+# TRABALHO PRÁTICO — SISTEMA CRUD EM LINGUAGEM C
+
+## 1. Tema do trabalho
+
+Desenvolvimento de um sistema CRUD em linguagem C com armazenamento de dados em arquivo de texto.
+
+Cada grupo ficará responsável por desenvolver um dos cinco projetos apresentados neste documento.
+
+## 2. Objetivo
+
+O objetivo deste trabalho é aplicar, de forma prática, os conhecimentos estudados durante as aulas:
+
+* Criação e utilização de `struct`;
+* Vetores de estruturas;
+* Funções;
+* Ponteiros;
+* Laços de repetição;
+* Estruturas condicionais;
+* Menu com `switch`;
+* Busca de registros;
+* Cadastro de dados;
+* Atualização de dados;
+* Exclusão de registros;
+* Manipulação de arquivos de texto;
+* Salvamento e carregamento automático dos dados.
+
+Além de praticar programação, cada grupo deverá desenvolver uma solução capaz de ajudar na resolução de um problema real.
+
+## 3. Organização dos grupos
+
+O trabalho será realizado em grupos.
+
+Cada grupo receberá um dos seguintes projetos:
+
+1. Agenda de contatos;
+2. Sistema de achados e perdidos;
+3. Biblioteca da turma;
+4. Controle de estoque da cantina;
+5. Empréstimo de equipamentos.
+
+Todos os integrantes deverão participar do desenvolvimento e conhecer o funcionamento do código.
+
+Durante a apresentação, o professor poderá fazer perguntas para qualquer integrante do grupo.
+
+## 4. O que é um CRUD?
+
+CRUD representa as quatro operações básicas realizadas sobre dados:
+
+* **Create:** cadastrar um novo registro;
+* **Read:** consultar ou listar os registros;
+* **Update:** atualizar um registro existente;
+* **Delete:** excluir um registro.
+
+Portanto, todos os projetos deverão obrigatoriamente permitir cadastrar, consultar, atualizar e excluir informações.
+
+---
+
+# PROJETO 1 — AGENDA DE CONTATOS
+
+## Situação-problema
+
+Uma pessoa precisa organizar seus contatos pessoais e profissionais. Atualmente, os nomes e telefones estão anotados em diferentes papéis e mensagens, dificultando a localização das informações.
+
+O grupo deverá desenvolver uma agenda digital que permita cadastrar e gerenciar contatos.
+
+## Exemplo da `struct`
+
+```c
+struct Contato {
+    int codigo;
+    char nome[50];
+    char telefone[20];
+    char email[50];
+};
+```
+
+## Funcionalidades obrigatórias
+
+O sistema deverá permitir:
+
+1. Cadastrar um contato;
+2. Consultar um contato pelo código;
+3. Listar todos os contatos;
+4. Atualizar nome, telefone e e-mail;
+5. Excluir um contato;
+6. Impedir códigos duplicados;
+7. Salvar os contatos em um arquivo de texto;
+8. Carregar os contatos quando o programa for iniciado;
+9. Buscar contatos pelo nome.
+
+## Exemplo de menu
+
+```text
+******************************************************
+*                AGENDA DE CONTATOS                  *
+******************************************************
+*  [1] CADASTRAR CONTATO                             *
+*  [2] CONSULTAR CONTATO                             *
+*  [3] LISTAR CONTATOS                               *
+*  [4] ATUALIZAR CONTATO                             *
+*  [5] EXCLUIR CONTATO                               *
+*  [6] BUSCAR PELO NOME                              *
+*  [0] SAIR                                          *
+******************************************************
+Escolha:
+```
+
+---
+
+# PROJETO 2 — SISTEMA DE ACHADOS E PERDIDOS
+
+## Situação-problema
+
+Objetos encontrados na escola são entregues à coordenação, mas nem sempre existe um registro indicando onde foram encontrados, quando foram entregues ou se já foram devolvidos.
+
+O grupo deverá desenvolver um sistema para organizar os objetos encontrados.
+
+## Exemplo da `struct`
+
+```c
+struct Objeto {
+    int codigo;
+    char descricao[50];
+    char localEncontrado[50];
+    char data[11];
+    char situacao[20];
+};
+```
+
+## Possíveis situações
+
+* Aguardando o dono;
+* Devolvido;
+* Encaminhado à coordenação.
+
+## Funcionalidades obrigatórias
+
+O sistema deverá permitir:
+
+1. Cadastrar um objeto encontrado;
+2. Consultar um objeto pelo código;
+3. Listar todos os objetos;
+4. Atualizar os dados de um objeto;
+5. Marcar um objeto como devolvido;
+6. Excluir um registro;
+7. Impedir códigos duplicados;
+8. Salvar os dados em um arquivo de texto;
+9. Carregar os dados quando o programa for iniciado;
+10. Listar somente os objetos que ainda não foram devolvidos.
+
+## Exemplo de menu
+
+```text
+******************************************************
+*              ACHADOS E PERDIDOS                    *
+******************************************************
+*  [1] CADASTRAR OBJETO                              *
+*  [2] CONSULTAR OBJETO                              *
+*  [3] LISTAR TODOS OS OBJETOS                       *
+*  [4] ATUALIZAR OBJETO                              *
+*  [5] MARCAR COMO DEVOLVIDO                         *
+*  [6] LISTAR OBJETOS PENDENTES                      *
+*  [7] EXCLUIR OBJETO                                *
+*  [0] SAIR                                          *
+******************************************************
+Escolha:
+```
+
+---
+
+# PROJETO 3 — BIBLIOTECA DA TURMA
+
+## Situação-problema
+
+Uma turma possui livros que podem ser emprestados aos alunos. Entretanto, não existe um controle adequado para saber quais livros estão disponíveis e quais estão emprestados.
+
+O grupo deverá desenvolver um sistema para controlar os livros da turma.
+
+## Exemplo da `struct`
+
+```c
+struct Livro {
+    int codigo;
+    char titulo[60];
+    char autor[50];
+    char situacao[20];
+};
+```
+
+## Possíveis situações
+
+* Disponível;
+* Emprestado.
+
+## Funcionalidades obrigatórias
+
+O sistema deverá permitir:
+
+1. Cadastrar um livro;
+2. Consultar um livro pelo código;
+3. Listar todos os livros;
+4. Atualizar os dados de um livro;
+5. Excluir um livro;
+6. Registrar o empréstimo de um livro;
+7. Registrar a devolução de um livro;
+8. Impedir o empréstimo de um livro que já está emprestado;
+9. Salvar os dados em um arquivo de texto;
+10. Carregar os dados quando o programa for iniciado;
+11. Listar somente os livros disponíveis.
+
+## Exemplo de menu
+
+```text
+******************************************************
+*                BIBLIOTECA DA TURMA                 *
+******************************************************
+*  [1] CADASTRAR LIVRO                               *
+*  [2] CONSULTAR LIVRO                               *
+*  [3] LISTAR TODOS OS LIVROS                        *
+*  [4] ATUALIZAR LIVRO                               *
+*  [5] EMPRESTAR LIVRO                               *
+*  [6] DEVOLVER LIVRO                                *
+*  [7] LISTAR LIVROS DISPONIVEIS                     *
+*  [8] EXCLUIR LIVRO                                 *
+*  [0] SAIR                                          *
+******************************************************
+Escolha:
+```
+
+---
+
+# PROJETO 4 — CONTROLE DE ESTOQUE DA CANTINA
+
+## Situação-problema
+
+A cantina precisa controlar os produtos disponíveis e identificar os itens que estão acabando. Sem esse controle, alguns produtos podem faltar ou ser comprados em quantidade inadequada.
+
+O grupo deverá desenvolver um sistema de controle de estoque.
+
+## Exemplo da `struct`
+
+```c
+struct Produto {
+    int codigo;
+    char nome[50];
+    int quantidade;
+    float preco;
+};
+```
+
+## Funcionalidades obrigatórias
+
+O sistema deverá permitir:
+
+1. Cadastrar um produto;
+2. Consultar um produto pelo código;
+3. Listar todos os produtos;
+4. Atualizar nome, quantidade e preço;
+5. Excluir um produto;
+6. Impedir códigos duplicados;
+7. Registrar entrada de produtos no estoque;
+8. Registrar saída de produtos do estoque;
+9. Impedir que a quantidade fique negativa;
+10. Listar produtos com menos de cinco unidades;
+11. Salvar os dados em um arquivo de texto;
+12. Carregar os dados quando o programa for iniciado.
+
+## Exemplo de menu
+
+```text
+******************************************************
+*              ESTOQUE DA CANTINA                    *
+******************************************************
+*  [1] CADASTRAR PRODUTO                             *
+*  [2] CONSULTAR PRODUTO                             *
+*  [3] LISTAR PRODUTOS                               *
+*  [4] ATUALIZAR PRODUTO                             *
+*  [5] REGISTRAR ENTRADA                             *
+*  [6] REGISTRAR SAIDA                               *
+*  [7] LISTAR PRODUTOS COM ESTOQUE BAIXO             *
+*  [8] EXCLUIR PRODUTO                               *
+*  [0] SAIR                                          *
+******************************************************
+Escolha:
+```
+
+---
+
+# PROJETO 5 — EMPRÉSTIMO DE EQUIPAMENTOS
+
+## Situação-problema
+
+Uma escola possui notebooks, cabos, ferramentas e outros equipamentos que podem ser emprestados. Sem um sistema de controle, torna-se difícil saber quais equipamentos estão disponíveis e quem é o responsável por cada empréstimo.
+
+O grupo deverá desenvolver um sistema para controlar esses equipamentos.
+
+## Exemplo da `struct`
+
+```c
+struct Equipamento {
+    int patrimonio;
+    char descricao[50];
+    char responsavel[50];
+    char situacao[20];
+};
+```
+
+## Possíveis situações
+
+* Disponível;
+* Emprestado;
+* Em manutenção.
+
+## Funcionalidades obrigatórias
+
+O sistema deverá permitir:
+
+1. Cadastrar um equipamento;
+2. Consultar um equipamento pelo número de patrimônio;
+3. Listar todos os equipamentos;
+4. Atualizar os dados de um equipamento;
+5. Excluir um equipamento;
+6. Registrar o empréstimo;
+7. Registrar a devolução;
+8. Informar o nome do responsável pelo empréstimo;
+9. Impedir o empréstimo de um equipamento indisponível;
+10. Listar somente os equipamentos disponíveis;
+11. Salvar os dados em um arquivo de texto;
+12. Carregar os dados quando o programa for iniciado.
+
+## Exemplo de menu
+
+```text
+******************************************************
+*          EMPRESTIMO DE EQUIPAMENTOS                *
+******************************************************
+*  [1] CADASTRAR EQUIPAMENTO                         *
+*  [2] CONSULTAR EQUIPAMENTO                         *
+*  [3] LISTAR EQUIPAMENTOS                           *
+*  [4] ATUALIZAR EQUIPAMENTO                         *
+*  [5] REGISTRAR EMPRESTIMO                          *
+*  [6] REGISTRAR DEVOLUCAO                           *
+*  [7] LISTAR EQUIPAMENTOS DISPONIVEIS               *
+*  [8] EXCLUIR EQUIPAMENTO                           *
+*  [0] SAIR                                          *
+******************************************************
+Escolha:
+```
+
+---
+
+# 5. REQUISITOS OBRIGATÓRIOS PARA TODOS OS PROJETOS
+
+Independentemente do projeto recebido, o programa deverá:
+
+1. Utilizar uma `struct` para representar os registros;
+2. Utilizar um vetor de estruturas;
+3. Utilizar funções para organizar o código;
+4. Possuir um menu principal;
+5. Utilizar `do while` para manter o menu em execução;
+6. Utilizar `switch` para tratar as opções;
+7. Cadastrar novos registros;
+8. Consultar um registro pelo código ou patrimônio;
+9. Listar todos os registros;
+10. Atualizar registros;
+11. Excluir registros;
+12. Impedir o cadastro de códigos duplicados;
+13. Exibir uma mensagem quando o registro não for encontrado;
+14. Solicitar confirmação antes de excluir;
+15. Salvar os registros em um arquivo `.txt`;
+16. Carregar automaticamente os registros ao iniciar;
+17. Atualizar o arquivo após cadastrar, alterar ou excluir;
+18. Permitir nomes e descrições com espaços;
+19. Apresentar mensagens claras para o usuário;
+20. Compilar e executar sem erros no ambiente utilizado em sala.
+
+## Exemplo de organização em funções
+
+```c
+int carregarDados(/* parâmetros */);
+int salvarDados(/* parâmetros */);
+int buscarPosicao(/* parâmetros */);
+
+void cadastrar(/* parâmetros */);
+void consultar(/* parâmetros */);
+void listar(/* parâmetros */);
+void atualizar(/* parâmetros */);
+void excluir(/* parâmetros */);
+```
+
+Os nomes das funções poderão ser adaptados ao projeto de cada grupo.
+
+## Formato sugerido para o arquivo
+
+Os dados poderão ser separados por ponto e vírgula.
+
+Exemplo:
+
+```text
+101;Teclado USB;10;59.90
+102;Mouse USB;5;35.50
+103;Cabo HDMI;3;42.00
+```
+
+---
+
+# 6. ORGANIZAÇÃO VISUAL
+
+O sistema deverá apresentar telas organizadas utilizando caracteres, traços e asteriscos.
+
+Exemplo:
+
+```text
+******************************************************
+*               NOME DO SISTEMA                     *
+******************************************************
+*                                                    *
+*  [1] CADASTRAR                                     *
+*  [2] CONSULTAR                                     *
+*  [3] LISTAR                                        *
+*  [4] ATUALIZAR                                     *
+*  [5] EXCLUIR                                       *
+*  [0] SAIR                                          *
+*                                                    *
+******************************************************
+Escolha:
+```
+
+As mensagens também deverão ser apresentadas de forma organizada:
+
+```text
++----------------------------------------------------+
+| SUCESSO: Registro cadastrado e salvo!              |
++----------------------------------------------------+
+```
+
+---
+
+# 7. ENTREGA
+
+Cada grupo deverá entregar:
+
+* Arquivo principal com extensão `.c`;
+* Arquivo `.txt` contendo pelo menos cinco registros de teste;
+* Nome completo dos integrantes;
+* Pequeno texto explicando o problema resolvido;
+* Lista das principais funções desenvolvidas;
+* Arquivos organizados em uma única pasta.
+
+A pasta deverá seguir este exemplo:
+
+```text
+grupo_1_agenda_contatos/
+├── agenda_contatos.c
+├── contatos.txt
+└── integrantes.txt
+```
+
+## Data da entrega
+
+**Data:** ****/****/________
+
+## Forma de entrega
+
+**Local da entrega:** ______________________________________
+
+---
+
+# 8. APRESENTAÇÃO
+
+Cada grupo deverá apresentar seu sistema para a turma.
+
+Durante a apresentação, o grupo deverá:
+
+1. Explicar o problema escolhido;
+2. Apresentar a `struct` utilizada;
+3. Demonstrar o cadastro de um registro;
+4. Demonstrar a consulta e a listagem;
+5. Demonstrar a atualização;
+6. Demonstrar a exclusão;
+7. Fechar e abrir novamente o programa para comprovar que os dados foram salvos;
+8. Explicar pelo menos uma função do código.
+
+Tempo sugerido para apresentação: **5 a 8 minutos por grupo**.
+
+---
+
+# 9. CRITÉRIOS DE AVALIAÇÃO
+
+| Critério                                             |      Pontuação |
+| ---------------------------------------------------- | -------------: |
+| Cadastro, consulta, listagem, atualização e exclusão |      30 pontos |
+| Salvamento e carregamento do arquivo de texto        |      20 pontos |
+| Organização do código em funções                     |      15 pontos |
+| Validações e tratamento de erros                     |      15 pontos |
+| Organização visual e facilidade de utilização        |      10 pontos |
+| Apresentação e participação dos integrantes          |      10 pontos |
+| **Total**                                            | **100 pontos** |
+
+---
+
+# 10. ORIENTAÇÕES IMPORTANTES
+
+* Testem todas as opções do menu antes da entrega;
+* Verifiquem se os dados continuam salvos após fechar o programa;
+* Utilizem nomes claros para variáveis e funções;
+* Evitem colocar todo o código dentro da função `main`;
+* Dividam as responsabilidades entre os integrantes;
+* Todos deverão compreender o funcionamento do programa;
+* O código entregue deverá ser produzido pelo grupo;
+* Em caso de dúvida, procurem o professor antes da data da entrega.
+
+## Mensagem final
+
+O objetivo não é apenas fazer o programa funcionar. O grupo deverá compreender como cada parte foi construída e como o sistema pode contribuir para resolver um problema real.
