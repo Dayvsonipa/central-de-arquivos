@@ -458,11 +458,11 @@ grupo_1_agenda_contatos/
 
 ## Data da entrega
 
-**Data:** ****/****/________
+**Data:** 04/07/2026
 
 ## Forma de entrega
 
-**Local da entrega:** ______________________________________
+**Local da entrega:** Apresentação em sala
 
 ---
 
@@ -489,13 +489,13 @@ Tempo sugerido para apresentação: **5 a 8 minutos por grupo**.
 
 | Critério                                             |      Pontuação |
 | ---------------------------------------------------- | -------------: |
-| Cadastro, consulta, listagem, atualização e exclusão |      30 pontos |
-| Salvamento e carregamento do arquivo de texto        |      20 pontos |
-| Organização do código em funções                     |      15 pontos |
-| Validações e tratamento de erros                     |      15 pontos |
-| Organização visual e facilidade de utilização        |      10 pontos |
-| Apresentação e participação dos integrantes          |      10 pontos |
-| **Total**                                            | **100 pontos** |
+| Cadastro, consulta, listagem, atualização e exclusão |      3 pontos |
+| Salvamento e carregamento do arquivo de texto        |      2 pontos |
+| Organização do código em funções                     |      2 pontos |
+| Validações e tratamento de erros                     |      2 pontos |
+| Organização visual e facilidade de utilização        |      3 pontos |
+| Apresentação e participação dos integrantes          |      3 pontos |
+| **Total**                                            | **15 pontos** |
 
 ---
 
