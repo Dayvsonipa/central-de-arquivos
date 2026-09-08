@@ -1,11 +1,3 @@
--- ============================================================
--- BANCO DIDATICO: ESCOLA TECH
--- Objetivo: praticar consultas em varias tabelas
--- Etapa 1: sem JOIN, utilizando FROM e WHERE
--- Etapa 2: com INNER JOIN e LEFT JOIN
-
--- ============================================================
-
 CREATE DATABASE escola_tech;
 
 USE escola_tech;
@@ -69,3 +61,52 @@ CREATE TABLE matriculas (
         FOREIGN KEY (id_curso)
         REFERENCES cursos(id_curso)
 );
+
+-- ============================================================
+-- DADOS PARA OS EXERCICIOS
+-- ============================================================
+
+INSERT INTO professores (nome, especialidade, email) VALUES
+('Ana Souza', 'Banco de Dados', 'ana.souza@escolatech.com'),
+('Carlos Mendes', 'Programacao Web', 'carlos.mendes@escolatech.com'),
+('Juliana Lima', 'Ciencia de Dados', 'juliana.lima@escolatech.com'),
+('Ricardo Alves', 'Redes de Computadores', 'ricardo.alves@escolatech.com'),
+('Fernanda Rocha', 'Seguranca da Informacao', 'fernanda.rocha@escolatech.com');
+
+INSERT INTO cursos (nome, carga_horaria, nivel, id_professor) VALUES
+('MySQL do Zero', 40, 'Basico', 1),
+('Desenvolvimento Web', 60, 'Intermediario', 2),
+('Python para Dados', 50, 'Intermediario', 3),
+('Fundamentos de Redes', 40, 'Basico', 4),
+('SQL Avancado', 30, 'Avancado', 1),
+('Seguranca Digital', 45, 'Basico', 5);
+
+INSERT INTO alunos (nome, cidade, data_nascimento, email) VALUES
+('Bruno Silva', 'Ipatinga', '2004-03-15', 'bruno.silva@email.com'),
+('Camila Oliveira', 'Coronel Fabriciano', '2003-07-22', 'camila.oliveira@email.com'),
+('Diego Santos', 'Timoteo', '2005-01-10', 'diego.santos@email.com'),
+('Eduarda Martins', 'Ipatinga', '2004-11-05', 'eduarda.martins@email.com'),
+('Felipe Costa', 'Santana do Paraiso', '2002-09-18', 'felipe.costa@email.com'),
+('Gabriela Gomes', 'Timoteo', '2005-05-27', 'gabriela.gomes@email.com'),
+('Henrique Ribeiro', 'Ipatinga', '2003-12-08', 'henrique.ribeiro@email.com'),
+('Isabela Carvalho', 'Coronel Fabriciano', '2004-06-14', 'isabela.carvalho@email.com'),
+('Joao Pereira', 'Ipatinga', '2005-02-20', 'joao.pereira@email.com');
+
+INSERT INTO matriculas
+    (id_aluno, id_curso, data_matricula, nota_final, situacao)
+VALUES
+(1, 1, '2026-02-02', 8.50, 'Aprovado'),
+(1, 2, '2026-08-03', NULL, 'Cursando'),
+(2, 1, '2026-02-02', 9.20, 'Aprovado'),
+(2, 3, '2026-08-03', NULL, 'Cursando'),
+(3, 2, '2026-02-03', 6.00, 'Reprovado'),
+(3, 4, '2026-08-04', NULL, 'Cursando'),
+(4, 1, '2026-02-03', 7.80, 'Aprovado'),
+(4, 5, '2026-08-04', NULL, 'Cursando'),
+(5, 3, '2026-02-04', 8.90, 'Aprovado'),
+(6, 4, '2026-02-04', 9.00, 'Aprovado'),
+(6, 1, '2026-08-05', NULL, 'Cursando'),
+(7, 2, '2026-02-05', 7.50, 'Aprovado'),
+(7, 5, '2026-08-05', NULL, 'Cursando'),
+(8, 3, '2026-02-05', 5.50, 'Reprovado'),
+(8, 6, '2026-08-06', NULL, 'Cursando');
