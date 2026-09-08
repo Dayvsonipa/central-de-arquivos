@@ -20,5 +20,14 @@ const materiais = [
         tamanho: "TXT",
         data: "28/08/2026",
         arquivo: "materiais/logica-programacao/trabalho_crud_projetos_1_a_5.txt"
+    },
+    {
+        nome: "banco_dados.txt",
+        disciplina: "Banco de Dados",
+        descricao: "Criação do banco de dados para aula de relatórios.",
+        tipo: "Documento de texto",
+        tamanho: "TXT",
+        data: "08/09/2026",
+        arquivo: "materiais/logica-programacao/banco_dados.txt"
     }
 ];
