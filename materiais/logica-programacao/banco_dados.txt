@@ -1,0 +1,71 @@
+-- ============================================================
+-- BANCO DIDATICO: ESCOLA TECH
+-- Objetivo: praticar consultas em varias tabelas
+-- Etapa 1: sem JOIN, utilizando FROM e WHERE
+-- Etapa 2: com INNER JOIN e LEFT JOIN
+
+-- ============================================================
+
+CREATE DATABASE escola_tech;
+
+USE escola_tech;
+
+-- ------------------------------------------------------------
+-- TABELA 1: professores
+-- Guarda os dados dos professores da escola.
+-- ------------------------------------------------------------
+CREATE TABLE professores (
+    id_professor INT AUTO_INCREMENT PRIMARY KEY,
+    nome         VARCHAR(100) NOT NULL,
+    especialidade VARCHAR(80) NOT NULL,
+    email        VARCHAR(120) NOT NULL UNIQUE
+);
+
+-- ------------------------------------------------------------
+-- TABELA 2: cursos
+-- Cada curso possui um professor responsavel.
+-- ------------------------------------------------------------
+CREATE TABLE cursos (
+    id_curso     INT AUTO_INCREMENT PRIMARY KEY,
+    nome         VARCHAR(100) NOT NULL,
+    carga_horaria INT NOT NULL,
+    nivel        ENUM('Basico', 'Intermediario', 'Avancado') NOT NULL,
+    id_professor INT NOT NULL,
+    CONSTRAINT fk_cursos_professores
+        FOREIGN KEY (id_professor)
+        REFERENCES professores(id_professor)
+);
+
+-- ------------------------------------------------------------
+-- TABELA 3: alunos
+-- Guarda os dados dos alunos.
+-- ------------------------------------------------------------
+CREATE TABLE alunos (
+    id_aluno     INT AUTO_INCREMENT PRIMARY KEY,
+    nome         VARCHAR(100) NOT NULL,
+    cidade       VARCHAR(80) NOT NULL,
+    data_nascimento DATE NOT NULL,
+    email        VARCHAR(120) NOT NULL UNIQUE
+);
+
+-- ------------------------------------------------------------
+-- TABELA 4: matriculas
+-- Relaciona os alunos aos cursos.
+-- Um aluno pode fazer varios cursos e um curso pode possuir
+-- varios alunos.
+-- ------------------------------------------------------------
+CREATE TABLE matriculas (
+    id_matricula INT AUTO_INCREMENT PRIMARY KEY,
+    id_aluno     INT NOT NULL,
+    id_curso     INT NOT NULL,
+    data_matricula DATE NOT NULL,
+    nota_final   DECIMAL(4,2),
+    situacao     ENUM('Cursando', 'Aprovado', 'Reprovado') NOT NULL,
+    CONSTRAINT uq_aluno_curso UNIQUE (id_aluno, id_curso),
+    CONSTRAINT fk_matriculas_alunos
+        FOREIGN KEY (id_aluno)
+        REFERENCES alunos(id_aluno),
+    CONSTRAINT fk_matriculas_cursos
+        FOREIGN KEY (id_curso)
+        REFERENCES cursos(id_curso)
+);
