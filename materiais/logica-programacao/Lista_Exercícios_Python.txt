@@ -1,0 +1,205 @@
+# Lista de Exercícios — Python
+
+## Conteúdos avaliados
+
+* Sequência de execução;
+* `print()` e comentários;
+* Variáveis e tipos;
+* `input()`;
+* Conversões com `int()` e `float()`;
+* Operações matemáticas;
+* F-strings;
+* Identificação de erros de sintaxe e de tipos.
+
+## Regras de autoria
+
+Esta atividade não será avaliada somente pelo código entregue. Cada aluno deverá:
+
+1. Utilizar informações e escolhas próprias;
+2. Entregar uma fotografia do planejamento feito à mão;
+3. Apresentar uma captura do programa funcionando;
+4. Explicar pessoalmente duas linhas escolhidas pelo professor;
+5. Realizar uma pequena alteração solicitada no momento da apresentação.
+
+O aluno deverá conhecer e conseguir explicar todo o código entregue. Códigos idênticos ou que utilizem conteúdos ainda não estudados deverão ser refeitos durante a aula.
+
+---
+
+# Exercício 1 — Minha apresentação no terminal
+
+Crie um programa chamado `minha_apresentacao.py`.
+
+O programa deverá apresentar uma ficha sobre você, utilizando somente comentários e comandos `print()`.
+
+A ficha deverá possuir:
+* Um título criado por você;
+* Seu primeiro nome;
+* Uma área da tecnologia que desperta sua curiosidade;
+* Algo que você já sabe fazer;
+* Algo que deseja aprender;
+* Uma frase criada por você;
+* Um encerramento;
+* Pelo menos um comentário explicando a finalidade do programa.
+
+A saída deverá possuir, no mínimo, oito linhas e utilizar algum elemento visual feito com caracteres, como `=`, `-`, `*` ou `#`.
+
+Não copie o formato utilizado por outro aluno. A organização visual faz parte da atividade.
+
+## Investigação obrigatória
+
+Depois que o programa estiver funcionando:
+
+1. Faça uma cópia do arquivo;
+2. Retire uma aspa ou um parêntese;
+3. Execute o programa;
+4. Registre uma captura do erro;
+5. Corrija somente o caractere necessário;
+6. Escreva, com suas palavras, o que provocou o erro.
+
+## Perguntas para apresentação
+
+* Qual foi a primeira instrução executada?
+* Para que serve o comentário colocado no código?
+* O que aconteceria se dois comandos `print()` trocassem de posição?
+
+---
+
+# Exercício 2 — Planejador de uma atividade da turma
+
+Crie um programa chamado `planejador_atividade.py`.
+
+Imagine uma atividade prática que poderia ser realizada pela sua turma. A atividade deverá ser inventada por você.
+
+O programa deverá solicitar:
+
+* Nome da atividade;
+* Quantidade de equipes;
+* Quantidade de alunos em cada equipe;
+* Duração da atividade em minutos;
+* Custo de material por aluno.
+
+Depois, o programa deverá calcular:
+
+* Total de alunos participantes;
+* Duração da atividade em horas;
+* Custo de material de cada equipe;
+* Custo total da atividade.
+
+Apresente um relatório organizado usando f-strings. Valores monetários deverão possuir duas casas decimais.
+
+## Requisitos técnicos
+
+O programa deverá utilizar:
+
+* Pelo menos uma variável `str`;
+* Pelo menos duas variáveis `int`;
+* Pelo menos uma variável `float`;
+* Conversão dos dados logo após a entrada;
+* Pelo menos quatro operações matemáticas;
+* Pelo menos quatro f-strings;
+* Um comentário explicando uma decisão tomada no programa.
+
+## Testes obrigatórios
+
+Execute o programa duas vezes:
+
+* Teste 1: utilizando números escolhidos por você;
+* Teste 2: aumentando a quantidade de equipes, mas mantendo os demais valores.
+
+Antes de executar o segundo teste, escreva à mão o resultado que você acredita que será apresentado. Depois, compare a previsão com a saída real.
+
+## Perguntas para apresentação
+
+* Por que o nome da atividade é uma `str`?
+* Por que o custo do material deve ser convertido para `float`?
+* Qual linha calcula o custo total?
+* O que aconteceria se a conversão numérica fosse removida?
+
+---
+
+# Exercício 3 — Cadastro de equipamento personalizado
+
+Crie um programa chamado `equipamento.py`.
+
+Escolha um equipamento que exista em sua escola, em sua casa ou em um ambiente de trabalho. Não utilize o mesmo equipamento escolhido pelo colega ao seu lado.
+
+O programa deverá solicitar:
+
+* Código do equipamento;
+* Nome do equipamento;
+* Local onde ele se encontra;
+* Quantidade disponível;
+* Valor estimado de uma unidade;
+* Tempo médio de utilização, em minutos.
+
+O código poderá conter letras e números. Por isso, deverá ser armazenado como texto.
+
+Crie também uma variável booleana chamada `disponivel`, inicialmente com o valor `True`.
+
+O programa deverá calcular:
+
+* Valor total dos equipamentos;
+* Tempo necessário para utilizar todas as unidades uma vez;
+* Conversão desse tempo de minutos para horas.
+
+Ao final, apresente uma ficha organizada contendo todos os dados informados e os resultados calculados.
+
+## Identificação individual
+
+O programa deverá possuir:
+
+* Um nome personalizado para o sistema;
+* Uma frase de abertura criada pelo aluno;
+* Um código de execução informado pelo professor no início da aula;
+* Um comentário explicando por que o código do equipamento foi armazenado como `str`.
+
+## Laboratório de erros
+
+Depois de finalizar o programa:
+
+1. Remova temporariamente a conversão de `quantidade`;
+2. Execute novamente;
+3. Registre o erro ou comportamento apresentado;
+4. Recoloque a conversão;
+5. Explique a diferença entre texto e número nessa situação.
+
+## Evidências da entrega
+
+Entregue:
+
+* Arquivo `equipamento.py`;
+* Fotografia do planejamento feito à mão;
+* Captura do primeiro teste;
+* Captura do teste com erro;
+* Captura do programa corrigido;
+* Explicação de três a cinco linhas sobre o que você aprendeu.
+
+## Desafio presencial
+
+Durante a apresentação, o professor escolherá uma destas alterações:
+
+* Trocar o equipamento cadastrado;
+* Acrescentar uma nova informação;
+* Modificar uma mensagem;
+* Alterar um cálculo;
+* Pedir a previsão de uma saída;
+* Solicitar a explicação de uma conversão.
+
+A alteração deverá ser realizada e testada pelo próprio aluno.
+
+---
+
+# Critérios de avaliação
+
+| Critério                             | Pontuação |
+| ------------------------------------ | --------: |
+| Programa executa corretamente        |       3,0 |
+| Uso adequado dos conteúdos estudados |       2,0 |
+| Cálculos e formatação dos resultados |       2,0 |
+| Evidências do processo de construção |       1,5 |
+| Explicação e alteração presencial    |       1,5 |
+| **Total**                            |  **10,0** |
+
+## Observação
+
+Não utilize estruturas que ainda não foram estudadas, como `if`, `for`, `while`, listas ou funções. O objetivo é demonstrar domínio dos conteúdos das Trilhas 1 e 2.
