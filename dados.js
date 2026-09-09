@@ -29,8 +29,7 @@ const materiais = [
         tamanho: "TXT",
         data: "08/09/2026",
         arquivo: "materiais/logica-programacao/banco_dados.txt"
-    }
-    ,
+    },
     {
         nome: "Lista_Exercicios_Python.txt",
         disciplina: "Python",
@@ -39,5 +38,14 @@ const materiais = [
         tamanho: "TXT",
         data: "09/09/2026",
         arquivo: "materiais/logica-programacao/Lista_Exercicios_Python.txt"
+    },
+    {
+        nome: "Lista_Exercicios_Join.txt",
+        disciplina: "Banco de Dados",
+        descricao: "Lista de exercícios Join.",
+        tipo: "Documento de texto",
+        tamanho: "TXT",
+        data: "09/09/2026",
+        arquivo: "materiais/logica-programacao/lista_exercicios_joins_basico.txt"
     }
 ];
