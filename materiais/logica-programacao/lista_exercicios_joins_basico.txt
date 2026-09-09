@@ -1,0 +1,185 @@
+============================================================
+LISTA DE EXERCÍCIOS — INNER, LEFT E RIGHT JOIN
+Banco de dados: escola_tech
+Nível: básico
+============================================================
+
+ORIENTAÇÕES
+
+Em todos os exercícios:
+
+1. Utilize apelidos para as tabelas.
+2. Utilize AS para dar nomes claros às colunas do resultado.
+3. Escreva corretamente a condição de relacionamento com ON.
+4. Execute a consulta e observe o resultado.
+5. Verifique quando aparecem valores NULL.
+
+Sugestões de apelidos:
+
+a = alunos
+m = matriculas
+c = cursos
+p = professores
+
+ATENÇÃO:
+Um aluno pode aparecer mais de uma vez porque pode possuir várias
+matrículas. Isso não significa que a consulta esteja errada.
+
+
+============================================================
+EXERCÍCIOS DE INNER JOIN
+============================================================
+
+EXERCÍCIO 1 — CURSOS E PROFESSORES
+
+A escola precisa produzir uma lista mostrando cada curso e seu
+professor responsável.
+
+Crie uma consulta que apresente:
+
+- Nome do curso;
+- Nome do professor;
+- Especialidade do professor.
+
+Tabelas necessárias:
+
+- cursos
+- professores
+
+Obrigatório utilizar: INNER JOIN
+
+Dica: relacione as tabelas pelo campo id_professor.
+
+
+EXERCÍCIO 2 — ALUNOS MATRICULADOS
+
+Crie uma consulta que mostre somente os alunos que possuem matrícula.
+
+Apresente:
+
+- Nome do aluno;
+- Data da matrícula;
+- Situação da matrícula.
+
+Tabelas necessárias:
+
+- alunos
+- matriculas
+
+Obrigatório utilizar: INNER JOIN
+
+Dica: relacione as tabelas pelo campo id_aluno.
+
+
+============================================================
+EXERCÍCIOS DE LEFT JOIN
+============================================================
+
+EXERCÍCIO 3 — TODOS OS ALUNOS
+
+A escola quer uma lista com todos os alunos, inclusive aqueles que
+ainda não possuem matrícula.
+
+Apresente:
+
+- Nome do aluno;
+- Cidade;
+- Situação da matrícula.
+
+Tabelas necessárias:
+
+- alunos
+- matriculas
+
+Obrigatório utilizar: LEFT JOIN
+
+Dica: como todos os alunos devem aparecer, a tabela alunos deve ficar
+depois do FROM.
+
+Pergunta para reflexão:
+O que aparece na situação de João Pereira?
+
+
+EXERCÍCIO 4 — ALUNOS E SEUS CURSOS
+
+Crie uma consulta que mostre todos os alunos e os cursos em que estão
+matriculados.
+
+Apresente:
+
+- Nome do aluno;
+- Nome do curso;
+- Nota final.
+
+Tabelas necessárias:
+
+- alunos
+- matriculas
+- cursos
+
+Obrigatório utilizar: dois LEFT JOIN.
+
+Dica: siga o caminho:
+
+alunos -> matriculas -> cursos
+
+O aluno sem matrícula também deverá aparecer.
+
+
+============================================================
+EXERCÍCIOS DE RIGHT JOIN
+============================================================
+
+EXERCÍCIO 5 — TODOS OS ALUNOS PELO LADO DIREITO
+
+Crie uma consulta que mostre todos os alunos, inclusive aqueles que
+não possuem matrícula.
+
+Desta vez, coloque:
+
+- matriculas do lado esquerdo;
+- alunos do lado direito.
+
+Apresente:
+
+- Nome do aluno;
+- Data da matrícula;
+- Situação da matrícula.
+
+Tabelas necessárias:
+
+- matriculas
+- alunos
+
+Obrigatório utilizar: RIGHT JOIN
+
+Dica: a tabela que deve ser preservada precisa ficar depois do
+RIGHT JOIN.
+
+
+EXERCÍCIO 6 — ALUNOS SEM MATRÍCULA
+
+Utilizando RIGHT JOIN, encontre somente os alunos que ainda não
+possuem matrícula.
+
+Apresente:
+
+- Código do aluno;
+- Nome do aluno;
+- Cidade.
+
+Tabelas necessárias:
+
+- matriculas
+- alunos
+
+Obrigatório utilizar: RIGHT JOIN
+
+Dica: depois de fazer o relacionamento, procure os registros em que:
+
+m.id_matricula IS NULL
+
+
+============================================================
+FIM DA LISTA
+============================================================
