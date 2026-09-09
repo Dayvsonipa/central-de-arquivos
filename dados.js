@@ -30,4 +30,14 @@ const materiais = [
         data: "08/09/2026",
         arquivo: "materiais/logica-programacao/banco_dados.txt"
     }
+    ,
+    {
+        nome: "Lista_Exercicios_Python.txt",
+        disciplina: "Python",
+        descricao: "Lista de exercícios Python.",
+        tipo: "Documento de texto",
+        tamanho: "TXT",
+        data: "09/09/2026",
+        arquivo: "materiais/logica-programacao/Lista_Exercicios_Python.txt"
+    }
 ];
