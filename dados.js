@@ -3,6 +3,24 @@
  * Coloque o arquivo dentro da pasta "materiais" e informe o caminho em "arquivo".
  */
 const materiais = [
+{
+    "nome": "crud_produtos_dicionarios.py",
+    "disciplina": "Python",
+    "descricao": "Exemplo de CRUD com dicionários: cinco produtos, menu, cadastro, listagem, alteração e exclusão.",
+    "tipo": "Código-fonte Python",
+    "tamanho": "PY",
+    "data": "06/10/2026",
+    "arquivo": "materiais/python/crud_produtos_dicionarios.py"
+},
+{
+    "nome": "atividades_crud_dicionarios.txt",
+    "disciplina": "Python",
+    "descricao": "Quatro propostas de sistemas próprios: biblioteca, alunos, personagens e serviços, com regras e testes.",
+    "tipo": "Documento de texto",
+    "tamanho": "TXT",
+    "data": "06/10/2026",
+    "arquivo": "materiais/python/atividades_crud_dicionarios.txt"
+},
     {
         nome: "crud_alunos.c",
         disciplina: "Lógica de Programação",

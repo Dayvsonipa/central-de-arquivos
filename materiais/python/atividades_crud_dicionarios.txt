@@ -1,0 +1,75 @@
+ATIVIDADES — CRUD COM DICIONÁRIOS EM PYTHON
+Professor Dayvson
+
+OBJETIVO
+Use crud_produtos_dicionarios.py como referência e construa seu próprio sistema.
+Escolha um dos quatro temas. Pense nas regras antes de escrever o código.
+
+REQUISITOS COMUNS
+- Dicionário com cinco registros já cadastrados.
+- Menu: listar, cadastrar, alterar, excluir e sair.
+- Um registro por linha.
+- Impedir códigos repetidos.
+- Informar quando o código não existir.
+- Confirmar antes de excluir.
+- Implementar as regras do tema.
+- Dados na memória; não é necessário usar arquivos ou banco de dados.
+
+1. BIBLIOTECA
+Dados: código, título, autor e quantidade disponível.
+- Emprestar livro: diminuir a quantidade disponível em uma unidade.
+- Recusar empréstimo quando a quantidade for zero.
+- Devolver livro: aumentar a quantidade em uma unidade.
+- Mostrar quais livros estão indisponíveis.
+Para pensar: emprestar significa excluir o cadastro? O que deve mudar?
+Considere que cada devolução informada corresponde a um empréstimo real.
+
+2. CONTROLE DE ALUNOS
+Dados: código, nome, nota 1 e nota 2.
+- Aceitar notas apenas entre 0 e 10.
+- Calcular a média de cada aluno na listagem.
+- Média >= 6: Aprovado. Média < 6: Recuperação.
+- Mostrar a média geral da turma.
+- Contar alunos aprovados e em recuperação.
+Para pensar: é preciso guardar a média ou pode calculá-la?
+O que acontece se não houver alunos cadastrados?
+
+3. PERSONAGENS DE UM JOGO
+Dados: código, nome, vida, ataque e moedas.
+- Receber dano: solicitar código e valor do dano.
+- Aceitar apenas dano positivo; vida não pode ficar abaixo de zero.
+- Comprar poção: custa 20 moedas e recupera 30 pontos de vida.
+- Vida não pode ultrapassar 100.
+- Recusar compra quando faltarem moedas.
+Para pensar: com 90 de vida, qual será a vida após a poção?
+E se o personagem tiver apenas 15 moedas?
+
+4. AGENDA DE SERVIÇOS
+Dados: código, cliente, equipamento, valor do serviço e situação.
+- Novo serviço começa como Pendente.
+- Adicionar opção para concluir serviço.
+- Contar serviços pendentes e concluídos.
+- Somar valores apenas dos serviços concluídos.
+- Permitir excluir somente serviços pendentes.
+Nesta atividade, concluir também significa receber o pagamento.
+A regra de situação deve valer também na opção alterar.
+Para pensar: qual campo muda quando um serviço é concluído?
+Por que o valor pendente não entra no total recebido?
+
+TESTES OBRIGATÓRIOS
+1. Cadastrar código existente: recusar sem substituir o registro.
+2. Alterar ou excluir código inexistente: informar que não foi encontrado.
+3. Cancelar exclusão: manter o registro.
+4. Listar dicionário vazio: informar que não há cadastros.
+   No tema serviços, use registros pendentes para esse teste.
+5. Tentar ação que viole a regra do tema: recusar ou limitar corretamente.
+
+ENTREGA
+Entregue o código e uma breve explicação da regra implementada.
+Na apresentação, mostre uma operação permitida e outra recusada.
+Explique qual condição do código tomou cada decisão.
+
+COMO EXECUTAR O EXEMPLO
+Google Colab: crie um notebook, copie o conteúdo do .py para uma célula de código
+e execute. Também pode usar Thonny ou VS Code com Python.
+Os cadastros retornam aos valores iniciais a cada execução do programa.
