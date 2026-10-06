@@ -1,5 +1,23 @@
 # Central de Arquivos
 
+## Versão gerenciável — Vercel + Neon
+
+A nova versão mantém o visual original e oferece painel do professor em `/admin`,
+uploads privados pelo Vercel Blob, gerenciamento de disciplinas e materiais,
+publicação/ocultação, troca de senha e importação dos sete materiais existentes.
+
+Siga [CONFIGURAR_VERCEL_NEON.md](CONFIGURAR_VERCEL_NEON.md) para ativar o sistema.
+O build da Vercel publica `public`; os arquivos estáticos antigos na raiz continuam
+atendendo o endereço atual do GitHub Pages durante a migração.
+
+```bash
+npm install
+npm test
+npm run build
+```
+
+As instruções abaixo referem-se à central estática original.
+
 Portal estático para disponibilizar materiais de aula aos alunos.
 
 ## Como publicar no GitHub

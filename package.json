@@ -1,0 +1,23 @@
+{
+  "name": "central-de-arquivos",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "dev": "node --env-file-if-exists=.env.local scripts/dev.cjs",
+    "db:setup": "node --env-file-if-exists=.env.local scripts/setup.cjs",
+    "password:hash": "node scripts/password.cjs",
+    "test": "node --test test/*.test.cjs"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.1",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "esbuild": "^0.25.12"
+  }
+}

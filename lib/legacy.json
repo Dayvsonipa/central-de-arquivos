@@ -1,0 +1,58 @@
+[
+  {
+    "key": "materiais/python/crud_produtos_dicionarios.py",
+    "title": "crud_produtos_dicionarios.py",
+    "description": "Exemplo de CRUD com dicionários: cinco produtos, menu, cadastro, listagem, alteração e exclusão.",
+    "category": "Python",
+    "filename": "crud_produtos_dicionarios.py",
+    "date": "2026-10-06T15:00:00Z"
+  },
+  {
+    "key": "materiais/python/atividades_crud_dicionarios.txt",
+    "title": "atividades_crud_dicionarios.txt",
+    "description": "Quatro propostas de sistemas próprios: biblioteca, alunos, personagens e serviços, com regras e testes.",
+    "category": "Python",
+    "filename": "atividades_crud_dicionarios.txt",
+    "date": "2026-10-06T15:00:00Z"
+  },
+  {
+    "key": "materiais/logica-programacao/crud_alunos.c",
+    "title": "crud_alunos.c",
+    "description": "CRUD de alunos em C com cadastro, consulta, atualização, exclusão e arquivo de texto.",
+    "category": "Lógica de Programação",
+    "filename": "crud_alunos.c",
+    "date": "2026-08-28T15:00:00Z"
+  },
+  {
+    "key": "materiais/logica-programacao/trabalho_crud_projetos_1_a_5.txt",
+    "title": "trabalho_crud_projetos_1_a_5.txt",
+    "description": "Descrição do trabalho prático em grupo com cinco opções de projetos CRUD.",
+    "category": "Lógica de Programação",
+    "filename": "trabalho_crud_projetos_1_a_5.txt",
+    "date": "2026-08-28T15:00:00Z"
+  },
+  {
+    "key": "materiais/logica-programacao/banco_dados.txt",
+    "title": "banco_dados.txt",
+    "description": "Criação do banco de dados para aula de relatórios.",
+    "category": "Banco de Dados",
+    "filename": "banco_dados.txt",
+    "date": "2026-09-08T15:00:00Z"
+  },
+  {
+    "key": "materiais/logica-programacao/Lista_Exercicios_Python.txt",
+    "title": "Lista_Exercicios_Python.txt",
+    "description": "Lista de exercícios Python.",
+    "category": "Python",
+    "filename": "Lista_Exercicios_Python.txt",
+    "date": "2026-09-09T15:00:00Z"
+  },
+  {
+    "key": "materiais/logica-programacao/lista_exercicios_joins_basico.txt",
+    "title": "Lista_Exercicios_Join.txt",
+    "description": "Lista de exercícios Join.",
+    "category": "Banco de Dados",
+    "filename": "lista_exercicios_joins_basico.txt",
+    "date": "2026-09-09T15:00:00Z"
+  }
+]

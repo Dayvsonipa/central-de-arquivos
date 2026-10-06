@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Painel do professor — Central de Arquivos</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container brand">
+            <div class="brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7.5V6a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v1.5M3 7.5h18l-2 10.5a2 2 0 0 1-2 1.5H5a2 2 0 0 1-2-2Z"/></svg></div>
+            <div><p class="eyebrow">Painel do professor</p><h1>Central de Arquivos</h1></div>
+            <a class="header-link" href="/">Ver central dos alunos ↗</a>
+        </div>
+    </header>
+    <section class="hero"><div class="container admin-hero"><p class="hero-tag">Seus materiais, organizados por você</p><h2>Prepare. Publique. Ensine.</h2><p class="hero-description">Envie arquivos, organize disciplinas e escolha o que os alunos podem baixar.</p></div></section>
+    <main class="container content">
+        <p id="message" class="notice" role="status" aria-live="polite" hidden></p>
+        <section id="login-panel" class="panel login-panel" hidden>
+            <span class="discipline-tag">Acesso exclusivo do professor</span>
+            <h2>Entrar no painel</h2>
+            <form id="login-form">
+                <label>Usuário<input name="username" autocomplete="username" required maxlength="100" value="dayvson"></label>
+                <label>Senha<input name="password" type="password" autocomplete="current-password" required maxlength="256"></label>
+                <button class="download-button" type="submit">Entrar</button>
+            </form>
+        </section>
+        <section id="workspace" hidden>
+            <div class="session-bar"><span>Olá, <strong id="username"></strong>.</span><button id="logout" class="button-secondary" type="button">Sair do painel</button></div>
+            <div class="stats">
+                <article class="panel"><span>Materiais</span><strong id="stat-total">0</strong></article>
+                <article class="panel"><span>Publicados</span><strong id="stat-published">0</strong></article>
+                <article class="panel"><span>Downloads</span><strong id="stat-downloads">0</strong></article>
+                <article class="panel"><span>Disciplinas</span><strong id="stat-categories">0</strong></article>
+            </div>
+            <nav class="admin-tabs" aria-label="Seções do painel">
+                <button data-tab="materials" class="subject-button active" type="button">Materiais</button>
+                <button data-tab="categories" class="subject-button" type="button">Disciplinas</button>
+                <button data-tab="settings" class="subject-button" type="button">Minha conta e importação</button>
+            </nav>
+            <section id="tab-materials">
+                <div class="section-title"><h2>Seus materiais</h2><button id="new-material" class="download-button" type="button">+ Novo material</button></div>
+                <div id="editor-panel" class="panel editor" hidden>
+                    <h3 id="editor-title">Novo material</h3>
+                    <form id="material-form">
+                        <input name="id" type="hidden">
+                        <div class="form-grid">
+                            <label>Título<input name="title" required maxlength="160" placeholder="Ex.: CRUD com dicionários em Python"></label>
+                            <label>Disciplina<select name="category_id" id="material-category" required></select></label>
+                        </div>
+                        <label>Descrição<textarea name="description" rows="3" maxlength="2000" placeholder="Explique o que o aluno encontrará neste material."></textarea></label>
+                        <label>Arquivo<input name="file" type="file"><small id="file-hint">Selecione um arquivo de até 50 MB. PDFs, códigos, documentos e ZIPs.</small></label>
+                        <label class="check-label"><input name="published" type="checkbox" checked> Publicar agora para os alunos</label>
+                        <progress id="upload-progress" max="100" value="0" hidden></progress>
+                        <p id="upload-status" class="muted" aria-live="polite"></p>
+                        <div class="actions"><button class="download-button" type="submit">Salvar material</button><button id="cancel-edit" class="button-secondary" type="button">Cancelar</button></div>
+                    </form>
+                </div>
+                <div class="filters admin-search"><label class="search-box"><span class="sr-only">Buscar seus materiais</span><input id="admin-search" type="search" placeholder="Buscar título, arquivo ou disciplina..."></label><label class="visibility-filter">Visibilidade<select id="visibility-filter"><option value="all">Todos</option><option value="published">Publicados</option><option value="hidden">Ocultos</option></select></label></div>
+                <div id="admin-materials" class="materials-grid"></div>
+            </section>
+            <section id="tab-categories" hidden>
+                <div class="section-title"><h2>Disciplinas</h2></div>
+                <div class="panel editor"><form id="category-form"><input name="id" type="hidden"><label>Nome da disciplina<input name="name" required maxlength="100" placeholder="Ex.: Python"></label><div class="actions"><button class="download-button" type="submit">Salvar disciplina</button><button id="cancel-category" class="button-secondary" type="button">Limpar</button></div></form></div>
+                <p class="muted">Para excluir uma disciplina, transfira ou exclua seus materiais primeiro.</p>
+                <div id="category-list" class="materials-grid"></div>
+            </section>
+            <section id="tab-settings" hidden>
+                <div class="materials-grid">
+                    <article class="panel"><h2>Alterar senha</h2><form id="password-form"><label>Senha atual<input name="current_password" type="password" autocomplete="current-password" required></label><label>Nova senha<input name="new_password" type="password" autocomplete="new-password" minlength="12" maxlength="256" required><small>Use pelo menos 12 caracteres.</small></label><label>Repita a nova senha<input name="repeat_password" type="password" autocomplete="new-password" minlength="12" maxlength="256" required></label><button class="download-button" type="submit">Alterar senha</button></form></article>
+                    <article class="panel"><span class="discipline-tag">Materiais da central atual</span><h2>Trazer meus arquivos</h2><p>Importe os sete materiais cadastrados na central original, incluindo o CRUD de Python e as atividades. As disciplinas serão criadas automaticamente.</p><p class="muted">Pode executar novamente: os materiais já importados serão ignorados. A importação publica os materiais.</p><button id="import-legacy" class="download-button" type="button">Importar materiais existentes</button><p id="import-status" aria-live="polite"></p><hr><h3>Limpar arquivos substituídos</h3><p class="muted">Remove cópias antigas e envios abandonados do armazenamento.</p><button id="cleanup" class="button-secondary" type="button">Limpar armazenamento</button></article>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer><div class="container footer-content"><strong>Central de Arquivos</strong><span>Professor Dayvson · Materiais de aula</span></div></footer>
+    <script src="/admin.js" defer></script>
+</body>
+</html>
