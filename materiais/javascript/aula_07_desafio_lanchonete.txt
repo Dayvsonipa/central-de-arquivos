@@ -1,0 +1,85 @@
+AULA 07 — DESAFIO: O CAIXA DA LANCHONETE
+Disciplina: JavaScript
+Professor: Dayvson
+Data: 09/11/2026
+
+SUA MISSÃO
+Você foi contratado para criar uma página que calcule a conta dos clientes de uma lanchonete. O usuário deverá preencher os campos, clicar em "Calcular conta" e visualizar os resultados na própria página.
+
+1. DADOS DE ENTRADA
+Crie campos para o usuário informar:
+- Preço de um lanche.
+- Quantidade de lanches.
+- Preço de uma bebida.
+- Quantidade de bebidas.
+- Valor do desconto em reais (não em porcentagem).
+- Número de pessoas que dividirão a conta igualmente.
+
+2. RESULTADOS
+A página deverá mostrar, com uma identificação para cada resultado:
+- Total gasto com lanches.
+- Total gasto com bebidas.
+- Valor da compra antes do desconto.
+- Valor final após o desconto.
+- Quanto cada pessoa deverá pagar.
+
+3. REGRAS
+- Crie um arquivo chamado desafio_lanchonete.html.
+- Mantenha o HTML e o JavaScript no mesmo arquivo.
+- Use campos input, com label, para receber os dados.
+- Use document.getElementById(...).value para ler os campos.
+- Converta os valores numéricos com Number().
+- Declare variáveis para guardar os valores e os resultados.
+- Utilize os operadores aritméticos +, -, * e /.
+- Mostre os resultados com .textContent.
+- Se usar form com onsubmit, utilize event.preventDefault() para evitar que a página seja recarregada.
+- Ao alterar os dados e clicar novamente no botão, os resultados devem ser atualizados.
+- Resolva com os conceitos estudados até a aula 7: não é necessário usar if ou laços.
+- O visual pode ser simples; a prioridade é o funcionamento.
+
+Nos testes, preencha todos os campos com valores válidos. Use quantidades inteiras positivas, preços não negativos, desconto entre zero e o valor da compra e um número inteiro de pessoas maior que zero. Quando não houver desconto, informe 0. O tratamento de entradas inválidas não faz parte deste desafio.
+
+4. ETAPAS DE DESENVOLVIMENTO
+Etapa 1: crie a estrutura HTML, os campos, o botão e os espaços dos resultados.
+Etapa 2: leia o preço e a quantidade dos lanches, converta e calcule o total dos lanches.
+Etapa 3: faça o mesmo para as bebidas.
+Etapa 4: calcule o valor da compra antes do desconto.
+Etapa 5: aplique o desconto e divida o valor final entre as pessoas.
+Etapa 6: exiba todos os resultados na página e confira com os dados abaixo.
+
+Dica: leia os campos → converta os valores → calcule → mostre na página.
+
+5. TESTE DE CONFERÊNCIA
+Digite:
+- Preço do lanche: 15
+- Quantidade de lanches: 4
+- Preço da bebida: 5
+- Quantidade de bebidas: 4
+- Desconto: 10
+- Número de pessoas: 2
+
+Resultados esperados:
+- Total dos lanches: R$ 60
+- Total das bebidas: R$ 20
+- Compra antes do desconto: R$ 80
+- Valor final: R$ 70
+- Valor por pessoa: R$ 35
+
+Depois, mude apenas a quantidade de lanches para 2 e calcule novamente.
+Confira se todos os resultados foram atualizados. Calcule também no papel para comparar.
+
+6. DESAFIO EXTRA — TROCO
+Adicione um campo para o valor entregue ao caixa para pagar a conta inteira.
+Mostre o troco, considerando o valor final após o desconto.
+Para testar, use um valor entregue maior ou igual ao total da conta.
+Com os dados originais do teste e pagamento de R$ 100, o troco deverá ser R$ 30.
+
+7. ANTES DE APRESENTAR
+[ ] Todos os campos têm identificação.
+[ ] Os valores foram convertidos com Number().
+[ ] Os cinco resultados aparecem na página.
+[ ] O teste de conferência está correto.
+[ ] Alterar os dados e calcular novamente atualiza os resultados.
+[ ] Consigo explicar as variáveis e as operações que utilizei.
+
+Apresente ao professor o arquivo HTML funcionando no navegador.
