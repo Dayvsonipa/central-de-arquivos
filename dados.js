@@ -4,6 +4,15 @@
  */
 const materiais = [
 {
+    "nome": "aula_07_desafio_lanchonete.txt",
+    "disciplina": "JavaScript",
+    "descricao": "Aula 7 — O caixa da lanchonete: desafio com entrada de dados, Number(), operadores aritméticos, teste de conferência e extra do troco.",
+    "tipo": "Documento de texto",
+    "tamanho": "TXT",
+    "data": "09/11/2026",
+    "arquivo": "materiais/javascript/aula_07_desafio_lanchonete.txt"
+},
+{
     "nome": "crud_produtos_dicionarios.py",
     "disciplina": "Python",
     "descricao": "Exemplo de CRUD com dicionários: cinco produtos, menu, cadastro, listagem, alteração e exclusão.",
